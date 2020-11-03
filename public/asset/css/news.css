@@ -1,0 +1,59 @@
+:root {
+    --main-blue: rgba(33, 150, 244);
+    --main-bgcolor: rgb(255, 255, 255);
+    --dark-main-bgcolor: rgb(51, 51, 51);
+    --dark-main-textcolor: rgb(255, 255, 255);
+}
+
+.news-table {
+    width: 100%;
+}
+
+.news-day {
+    width: max(10%, 90px);
+    font-family: Oswald, YakuHanJPs, "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+.news-title a {
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    transition: all .3s ease-out;
+}
+
+.news-title a:hover {
+    color: rgb(0, 0, 0);
+    background: none;
+}
+
+.dark-theme .news-title a {
+    color: var(--dark-main-textcolor);
+}
+
+.dark-theme .news-title a:hover {
+    color: var(--dark-main-textcolor);
+}
+
+.news-title {
+    pointer-events: auto;
+    transition: all .3s ease-out;
+}
+
+.news-box {
+    pointer-events: none;
+    transition: all .3s ease-out;
+}
+
+.news-box:hover {
+    opacity: .5;
+}
+
+.oneofnews {
+    display: none;
+    margin-bottom: 2em;
+}
+
+.news-day-page {
+    font-weight: 800;
+    color: rgb(84, 161, 228);
+    font-family: Oswald, YakuHanJPs, "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}

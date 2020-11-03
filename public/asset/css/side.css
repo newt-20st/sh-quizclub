@@ -1,0 +1,188 @@
+:root {
+    --main-blue: rgba(33, 150, 244);
+    --main-bgcolor: rgb(255, 255, 255);
+    --dark-main-bgcolor: rgb(51, 51, 51);
+    --dark-main-textcolor: rgb(255, 255, 255);
+}
+
+nav ol,
+nav ul {
+    list-style: none;
+}
+
+.nav_grobalNavi {
+    font-size: 1.8em;
+    font-family: YakuHanJPs, "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: .1em;
+    line-height: 1;
+}
+
+.nav_grobalNavi a {
+    color: #2196f4;
+    display: block;
+    line-height: 0;
+    padding: min(calc(100vh / 12), 50px) 0;
+    border-radius: 0px;
+}
+
+.nav_grobalNavi a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.nav_grobalNavi ul {
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .menuButton {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1400;
+        background: #2196f4;
+        width: 75px;
+        height: 75px;
+        line-height: 1;
+        border-radius: 0 0 0 10px;
+    }
+    .menuIcon {
+        position: relative;
+        width: 60%;
+        height: 55%;
+        margin: auto;
+    }
+    .menuIcon__line {
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        height: 10%;
+        background-color: rgb(255 255 255);
+        transition: .3s;
+    }
+    .menuIcon__line:nth-child(1) {
+        top: 0;
+    }
+    .menuIcon__line:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .menuIcon__line:nth-child(3) {
+        bottom: 0;
+    }
+    .menuIcon__line:nth-child(1).active {
+        top: 40%;
+        transform: rotate(45deg);
+    }
+    .menuIcon__line:nth-child(2).active {
+        transform: scaleX(0);
+    }
+    .menuIcon__line:nth-child(3).active {
+        top: 40%;
+        transform: rotate(135deg);
+        margin: 0px;
+    }
+    #grobalNavi {
+        transition: all .5s;
+    }
+    .closingMenu {
+        display: block;
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(to right, rgb(33 150 244), rgb(115 169 255));
+        z-index: -100;
+        position: fixed;
+        top: 0px;
+        opacity: 0;
+    }
+    .openingMenu {
+        display: block;
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(to right, #2196f4, #73a9ff);
+        z-index: 100;
+        position: fixed;
+        top: 0px;
+        opacity: 0.9;
+    }
+    .nav_grobalNavi {
+        width: min(80%, 300px);
+        margin: 2em auto .5em;
+    }
+    .nav_grobalNavi a {
+        color: rgb(255, 255, 255);
+        padding: min(1em, calc(100vh / 12)) 0;
+        border-radius: 0px;
+    }
+    .openingMenu .nav_grobalNavi a:hover {
+        background: rgb(255, 255, 255);
+        color: rgb(33, 150, 244);
+    }
+    .openingMenu .nav_grobalNavi a.nowhere {
+        background: rgb(255, 255, 255);
+        color: #2196f4;
+    }
+    #spFooter {
+        background-color: white;
+        margin-top: 3em;
+        transition: .5s;
+    }
+    #spFooter .nav_grobalNavi {
+        width: min(80%, 300px);
+        margin: auto;
+        padding: 1em 0;
+    }
+    #spFooter .nav_grobalNavi a {
+        color: rgb(33, 150, 244);
+        padding: 0px;
+        line-height: 1.5em;
+    }
+    #spFooter .nav_grobalNavi a:hover {
+        color: rgb(255, 255, 255);
+    }
+    .dark-theme #spFooter .nav_grobalNavi a:hover {
+        color: var(--dark-main-bgcolor);
+    }
+    #spFooter .nav_grobalNavi li:not(:last-child) {
+        border-bottom: 2px solid #c3c3c3;
+    }
+    .copyright {
+        display: none;
+    }
+    #spFooter .copyright {
+        display: block;
+        background-color: white;
+        color: black;
+        margin: auto 0;
+        padding: 1em;
+        text-align: center;
+        transition: .5s;
+    }
+}
+
+@media (min-width: 900px) {
+    #side {
+        background: rgb(255, 255, 255);
+        position: fixed;
+        top: 0px;
+        width: 200px;
+        box-shadow: 0 0 15px #c3c3c3;
+        height: 100vh;
+    }
+    .menuButton {
+        display: none;
+    }
+    #spFooter {
+        display: none;
+    }
+    .nav_grobalNavi a.nowhere {
+        background: rgb(33 150 244);
+        color: white;
+    }
+}

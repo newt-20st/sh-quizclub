@@ -1,0 +1,53 @@
+#lvWrapper {
+    background-color: rgb(250, 250, 250);
+    min-height: 100vh;
+}
+
+#lvQuizInfo {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.lvElementCover {
+    text-align: center;
+    background-color: #304FFE;
+    margin: 1em;
+    border-radius: 5px;
+    color: white;
+    padding: .5em;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.lvElement {
+    font-weight: 800;
+    font-size: 2em;
+}
+
+.lvTableTd {
+    text-align: center;
+}
+
+#lvNowQuizNumberCover {
+    margin: 0 .25em 0 .5em
+}
+
+#lvNowQuizTimeCover {
+    margin: 0 .5em 0 .25em
+}
+
+#lvNowQuizQuestionCover {
+    background-color: #304FFE;
+    margin: .4em;
+    border-radius: 5px;
+    color: white;
+    padding: .5em;
+    line-height: 1em;
+    font-size: 1.3em;
+}
+
+#lvElementAnswer {
+    text-align: right;
+    font-weight: 800;
+}
