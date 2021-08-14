@@ -1,0 +1,1 @@
+This is the repository of the unofficial SHQC website. This repository is now archived.
